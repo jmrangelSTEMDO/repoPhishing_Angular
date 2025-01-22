@@ -12,9 +12,12 @@
         <div>
             <h2 class="text-2xl font-semibold">Sign in</h2>
             <h6 class="text-sm mb-4">to continue to Outlook</h6>
-            <form>
+            <form >
                 <div class="mb-4">
-                    <input type="email" placeholder="Email, phone, or Skype" required class="w-full border-b border-gray-600 focus:outline-none focus:border-b-2 focus:border-gray-600 placeholder:text-gray-600">
+                    <input type="email" name="email" placeholder="Email, phone, or Skype" required class="w-full border-b border-gray-600 
+                    focus:outline-none focus:border-b-2 focus:border-gray-600 placeholder:text-gray-600 form-control"
+                    id="email"  [(ngModel)]="email">
+                    
                 </div>                    
                 <div class="mb-4">
                     <p class="text-xs mb-3">No account? <a href="#" class="text-[#0078d4] hover:text-[#005a9e] no-underline text-xs">Create one!</a></p>
@@ -22,9 +25,9 @@
                 </div>
                                        
                 <div class="flex justify-end">
-                    <button type="submit" class="bg-[#0067b8] text-white text-sm px-3 py-1.5 w-28 text-center hover:bg-[#005a9e] transition-colors cursor-pointer">Next</button>
+                    <button type="submit" class="bg-[#0067b8] text-white text-sm px-3 py-1.5 w-28 text-center hover:bg-[#005a9e]
+                     transition-colors cursor-pointer" (click)="addUser()">Next</button>
                 </div>
-
             </form>
         </div>
         
