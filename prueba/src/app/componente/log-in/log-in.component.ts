@@ -30,11 +30,13 @@ export class LogInComponent {
     
   }
   async addUser() {
+    console.log("primero: "+this.email)
     let user:Usuario = {email: this.email};
     try {
       // Obtén una referencia a la colección "sandwiches"
       const usuarios = collection(this.firestore, 'usuarios');
       // Agrega un nuevo documento a la colección
+      console.log("email: "+this.email)
       await addDoc(usuarios, {
         email: user.email
       });
