@@ -1,6 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
+import { slideInRight } from './route-animations';
+
 
 
 
@@ -11,7 +13,8 @@ declare let gtag: Function;
   imports: [RouterOutlet],
   standalone:true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  animations: [ slideInRight ]
 })
 export class AppComponent {
   title = 'prueba';

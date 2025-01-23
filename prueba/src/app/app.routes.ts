@@ -5,9 +5,9 @@ import { NgModule } from '@angular/core';
 import { FinalComponent } from './componente/final/final.component';
 
 export const routes: Routes = [
-    {path: "" , component : LogInComponent},
-    {path:"stemdo", component:LogInStemdoComponent},
-    {path: "final" , component : FinalComponent},
+    {path: "" , component : LogInComponent, data: { animation: 'slideInRight'}},
+    {path:"stemdo", component:LogInStemdoComponent, data: { animation: 'slideInRight'}},
+    {path: "final" , component : FinalComponent, data: { animation: 'slideInRight'}},
 
 ];
 
