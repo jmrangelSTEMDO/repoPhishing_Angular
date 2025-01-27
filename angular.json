@@ -17,7 +17,7 @@
              "allowedCommonJsDependencies": [
                 "@grpc/grpc-js",
               "@grpc/proto-loader"],
-            "outputPath": "dist/prueba",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
