@@ -7,6 +7,5 @@ export const environment = {
     storageBucket: "mywebdatos.firebasestorage.app",
     messagingSenderId: "946693455382",
     appId: "1:946693455382:web:41cbbb348ac4216f60bf37",
-    // measurementId: "G-5B3HKFB3VH"
   }
 };

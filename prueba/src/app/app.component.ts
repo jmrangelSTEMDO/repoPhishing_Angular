@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
-import { slideInRight } from './route-animations';
+// prueba
+import { trigger, transition, style, animate } from '@angular/animations';
 
 
 
@@ -14,15 +15,14 @@ declare let gtag: Function;
   standalone:true,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
-  animations: [ slideInRight ]
+  animations: [ ]
 })
 export class AppComponent {
   title = 'prueba';
 
 
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) {}
+  
   ngOnInit(){
 
 }

@@ -60,7 +60,6 @@ export class LogInComponent {
         await addDoc(usuarios, {
           email: user.email
         });
-        console.log(user.email);
         this.ruta.navigate(["/stemdo"]);
   
   
@@ -68,32 +67,7 @@ export class LogInComponent {
   
       }
     }
-    
-
-
-  
 }
 
-// getControl(controlName: string) {
-//   return this.login.get(controlName);
-// }
-
-// isControlInvalid(controlName: string): boolean {
-//   const control = this.getControl(controlName);
-//   return control!.invalid && control!.touched;
-// }
-
-// getControlErrors(controlName: string): string[] {
-//   const control = this.getControl(controlName);
-//   if (control?.errors) {
-//     return Object.keys(control.errors);
-//   }
-//   return [];
-// }
-
-// isControlInvalid(controlName: string, isSubmitted: boolean): boolean {
-//   const control = this.getControl(controlName);
-//   return control!.invalid && isSubmitted;
-// }
 
 }
