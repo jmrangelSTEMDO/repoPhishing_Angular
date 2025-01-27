@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./dist/:/var/www/html
+      - ./dist/browser:/var/www/html
   app:
     build:
       context: .
