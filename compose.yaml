@@ -8,4 +8,4 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./dist/prueba/:/var/www/html
+      - ./dist/prueba/:/var/www/html 
