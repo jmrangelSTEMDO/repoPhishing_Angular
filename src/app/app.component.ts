@@ -1,6 +1,8 @@
-import { Component, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { filter } from 'rxjs';
+
+
 
 
 
@@ -11,15 +13,15 @@ declare let gtag: Function;
   imports: [RouterOutlet],
   standalone:true,
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
+  animations: [ ]
 })
 export class AppComponent {
   title = 'prueba';
 
 
-  constructor(private router: Router) {
-
-  }
+  constructor(private router: Router) {}
+  
   ngOnInit(){
 
 }

@@ -10,16 +10,15 @@
       "sourceRoot": "src",
       "prefix": "app",
       "architect": {
-        
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-             "allowedCommonJsDependencies": [
-                "@grpc/grpc-js",
-              "@grpc/proto-loader"],
-            "outputPath": "dist/",
+            "outputPath": "dist/prueba",
             "index": "src/index.html",
             "browser": "src/main.ts",
+            "allowedCommonJsDependencies": [
+              "lodash"
+           ],
             "polyfills": [
               "zone.js"
             ],
@@ -45,8 +44,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1MB",
-                  "maximumError": "2MB"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -100,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "d23b20a8-2629-4cc3-b75d-bc251e47e933"
+    "analytics": "6db2b852-a932-4307-83fd-4f4d991cacba"
   }
 }

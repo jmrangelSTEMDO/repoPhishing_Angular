@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GAnalyticsService } from './g-analytics.service';
+import { UsuarioService } from './usuario.service';
 
-describe('GAnalyticsService', () => {
-  let service: GAnalyticsService;
+describe('UsuarioService', () => {
+  let service: UsuarioService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GAnalyticsService);
+    service = TestBed.inject(UsuarioService);
   });
 
   it('should be created', () => {

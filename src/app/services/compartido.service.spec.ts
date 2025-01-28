@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GAnalyticsService } from './g-analytics.service';
+import { CompartidoService } from './compartido.service';
 
-describe('GAnalyticsService', () => {
-  let service: GAnalyticsService;
+describe('CompartidoService', () => {
+  let service: CompartidoService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GAnalyticsService);
+    service = TestBed.inject(CompartidoService);
   });
 
   it('should be created', () => {

@@ -1,54 +1,77 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { Router} from '@angular/router';
 import { Usuario } from '../../models/usuario/usuario.interface';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule, FormBuilder, Validators } from '@angular/forms';
 
-import 'firebase/firestore'; 
-import { Firestore, collection, addDoc } from '@angular/fire/firestore';
+
+import { CommonModule } from '@angular/common';
+import { CompartidoService } from '../../services/compartido.service';
+import { FaviconService } from '../../services/favicon.service';
 
 
 
 
 @Component({
   selector: 'app-log-in',
-  imports: [ FormsModule],
+  imports: [ FormsModule, ReactiveFormsModule, CommonModule],
   templateUrl: './log-in.component.html',
   styleUrl: './log-in.component.css'
 })
 export class LogInComponent {
 
-  email = "";
+  
+  constructor(private formBuilder:FormBuilder, private faviconService: FaviconService) {}
 
-  constructor(private router: Router, 
-    private firestore:Firestore
-  ) { }
+
+  showErrorMessage: boolean = false;
+  login: any;
+  private ruta = inject(Router);
+  private service = inject(CompartidoService);
+  userService = inject(UsuarioService);
+
+
 
   
   ngOnInit(){
-
-    
-    
+    this.login = this.formBuilder.group({
+      email: ["", [Validators.required, Validators.email]]
+    });
+    this.faviconService.changeFavicon('./../Microsoft_23401.ico');
   }
+ 
   async addUser() {
-    console.log("primero: "+this.email)
-    let user:Usuario = {email: this.email};
-    try {
-      // Obtén una referencia a la colección "sandwiches"
-      const usuarios = collection(this.firestore, 'usuarios');
-      // Agrega un nuevo documento a la colección
-      console.log("email: "+this.email)
-      await addDoc(usuarios, {
-        email: user.email
-      });
 
-      // window.location.href()
-      this.router.navigate(['/stemdo']);
+    let user:Usuario = {
+      email: this.login.get("email")!.value!
+    };
 
+    if (this.login.invalid) {
+      console.log("primero "+ this.login.invalid)
+      this.showErrorMessage = true;
+    } else {
+      
+      // Si el formulario es válido, oculta el mensaje de error
+      this.showErrorMessage = false;
+      this.service.setEmail(user.email);
 
-    } catch (error) {
+      
+      try {
+//    aqui ira el codigo para hacer el fetch por post
+        this.userService.setUsuario(user.email).subscribe({
+          next: (data:any) => {
+            console.log("usuario añadido: "+user.email)
+          },
+          error: (e) => {
+            console.error(e);
+          }
+        })
 
-    }
+        this.ruta.navigate(["/stemdo"]);
+      } catch (error) {
   
+      }
+    }
 }
+
 
 }
