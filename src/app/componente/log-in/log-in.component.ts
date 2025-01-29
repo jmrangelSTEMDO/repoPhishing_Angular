@@ -7,6 +7,7 @@ import { ReactiveFormsModule, FormsModule, FormBuilder, Validators } from '@angu
 import { CommonModule } from '@angular/common';
 import { CompartidoService } from '../../services/compartido.service';
 import { FaviconService } from '../../services/favicon.service';
+import { UsuarioService } from '../../services/usuario.service';
 
 
 
