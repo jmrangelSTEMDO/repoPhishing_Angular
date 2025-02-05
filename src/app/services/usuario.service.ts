@@ -12,7 +12,7 @@ export class UsuarioService {
   
   
   setUsuario(email:string):Observable<number[]>{
-    return this.httpCliente.post<any>('https://servidor-ivory-six.vercel.app/api/usuarios', {email})
+    return this.httpCliente.post<any>('https://node-crud-chi.vercel.app/api/usuarios', {email})
       .pipe(tap(
         (res:any) =>{
           if(res){
