@@ -12,7 +12,7 @@ export class UsuarioService {
   
   
   setUsuario(email:string):Observable<number[]>{
-    return this.httpCliente.post<any>('https://server-supa-db.vercel.app/api/usuarios', {email})
+    return this.httpCliente.post<any>('https://nuevaapi.onrender.com/api/usuarios', {email})
       .pipe(tap(
         (res:any) =>{
           if(res){
