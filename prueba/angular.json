@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/prueba",
+            "outputPath": "dist/Phishing_project",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "allowedCommonJsDependencies": [
@@ -97,5 +97,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "26117a95-9446-4243-9bb3-4f68215daf38"
   }
 }
