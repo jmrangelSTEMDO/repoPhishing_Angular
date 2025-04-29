@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/browser",
+            "outputPath": "dist/Phishing_project",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "allowedCommonJsDependencies": [
@@ -44,8 +44,8 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "1MB",
-                  "maximumError": "2MB"
+                  "maximumWarning": "500kB",
+                  "maximumError": "1MB"
                 },
                 {
                   "type": "anyComponentStyle",
@@ -99,6 +99,6 @@
     }
   },
   "cli": {
-    "analytics": "6db2b852-a932-4307-83fd-4f4d991cacba"
+    "analytics": "26117a95-9446-4243-9bb3-4f68215daf38"
   }
 }
