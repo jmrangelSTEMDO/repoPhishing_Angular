@@ -1,0 +1,49 @@
+
+<div class="flex flex-col h-screen bg-black relative">
+
+        <img  class= "bg-auto md:bg-cover lg:bg-contain xl:bg-cover bg-center bg-no-repeat opacity-40 absolute inset-0 z-0 h-full w-full" 
+            src="./../../../../illustration.png" alt="Logo Stemdo fondo">
+
+    <header class="flex items-center p-4 z-10">
+        <div class="flex items-center">
+            <img src="./../../../../Stemdo_Logo_Full_White.png" alt="Logo" class="h-8">
+        </div>
+    </header>
+    <div class="flex flex-col justify-center items-center relative flex-grow z-10">
+        <div class="bg-white p-11 shadow-lg max-w-[440px] w-full -mt-10">
+
+            <div class="flex items-start mb-3">
+                <div class="bg-black p-1">
+                    <img class="align-middle border-0 max-w-[150px] max-h-[150px] text-2xl"
+                        src="./../../../../Stemdo_Logo_Full_White.png" alt="Logo Stemdo Letras">
+                </div>
+            </div>
+
+            <div>
+                <span class="flex items-center text-sm mb-4">
+                    <button onclick="window.history.back()" class="flex items-center text-black-600 hover:text-black-800 hover:bg-gray-300 rounded-full p-2 focus:outline-none">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <!-- Icono de flecha -->
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12H3m0 0l6-6m-6 6l6 6" />
+                        </svg>
+                    </button>
+                    <span >{{emailcp}}</span> <!-- Email de la persona x -->
+                </span>
+                <h1 class="text-2xl font-semibold mb-4">Enter password</h1>
+                    <div class="mb-4">
+                        <input type="password" placeholder="Password" required
+                            class="w-full border-b border-gray-600 focus:outline-none focus:border-b-2 focus:border-gray-600 placeholder:text-gray-600">
+                    </div>
+                    <div class="mb-4">
+                        <a href="#" class="text-[#0078d4] hover:text-[#005a9e] no-underline text-s">Forgot my
+                            password</a>
+                    </div>
+
+                    <div class="flex justify-end">
+                        <button  routerLink="/final"
+                            class="bg-[#0067b8] text-white text-sm px-3 py-1.5 w-28 text-center hover:bg-[#005a9e] transition-colors">Sign
+                            in</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>    
